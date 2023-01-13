@@ -1,14 +1,14 @@
-# O projeto
+# O projeto 📚
 
 Projeto base automação de testes com Cypress 9 e Cucumber.
 
-# Dependências
+# Dependências 💾
 
 Foi utilizado:
 * Cypress 9.7.0
 * Cucumber preprocessor
 
-# Como iniciar um projeto de automação com Cypress 9 e Cucumber
+# Como iniciar um projeto de automação com Cypress 9 e Cucumber ✍
 
 **Passo 1:** iniciar um projeto NodeJS<br>
 Basta digitar o comando abaixo no terminal:<br>
@@ -28,7 +28,7 @@ Criará o arquivo `package.json`.
 
 ![img](./imagens/print_cucumber_instalado.png "Cucumber instalado")
 
-Se eu VSCode exibir esta mensagem você pode clicar em "Sim". Isto apenas irá criar um arquivo `.gitignore` que irá desconsiderar os módulos node nos seus commits.
+Se seu VSCode exibir esta mensagem você pode clicar em "Sim". Isto apenas irá criar um arquivo `.gitignore` que irá desconsiderar os módulos node nos seus commits.
 
 ![img](./imagens/print_mensagem_gitignore.png "Mensagem arquivo .gitignore")
 
@@ -39,7 +39,7 @@ A pasta `cypress` será criada. O cypress pode ser fechado pois não será usado
 
 ![img](./imagens/print_pasta_cypress.png "Pasta cypress criada")
 
-**Passo 5:** adicionar o script abaixo no arquivo cypress/plugins/index.js
+**Passo 5:** adicionar o script abaixo no arquivo `index.js`
 
 cypress/plugins/index.js
 ```
@@ -53,12 +53,12 @@ module.exports = (on) => {
 
 ![img](./imagens/print_plugins.png "Script plugin")
 
-**Passo 6:** criar pastas extras para os testes
+**Passo 6:** criar pastas extras para os testes<br>
 Criar pastas: elements, pageObjects e steps.
 
-cypress/support/elements
-cypress/support/pageObjects
-cypress/support/steps
+* cypress/support/elements
+* cypress/support/pageObjects
+* cypress/support/steps
 
 ![img](./imagens/print_pastas_extras.png "Pastas extras")
 
@@ -80,7 +80,7 @@ O meu ficou da seguinte mandeira:
 ![img](./imagens/print_codigo_package_json.png "Exibindo arquivo package.json")
 
 **Passo 8:** adicionar o código abaixo no arquivo `cypress.json`
-Ele informa a resolução do navegador, timeout e a URL base (que é a URL dos testes). Você pode modificar este arquivo como desejar.
+Ele informa a resolução do navegador que será usado nos testes, timeout e a URL base (que é a URL dos testes). Você pode modificar este arquivo como desejar.
 
 ```
 {
@@ -93,7 +93,7 @@ Ele informa a resolução do navegador, timeout e a URL base (que é a URL dos t
 
 ![img](./imagens/print_cypress_json.png "Arquivo cypress.json")
 
-**Passo 9:** criar o cenário de teste em BDD
+**Passo 9:** criar o cenário de teste em BDD<br>
 Criar um arquivo `.feature` com os testes em BDD. Você pode usar o abaixo como base:
 
 cypress/integration/Login.feature
@@ -112,10 +112,10 @@ Você pode deletar essas duas pastas do cypress (getting-started e advanced-exem
 
 ![img](./imagens/print_deletar_pastas.png "Pastas para excluir")
 
-**Passo 10:** criar arquivo `.js` que terá os passos do teste
-Você pode usar este como base:
+**Passo 10:** criar arquivo `.js` que terá os passos do teste<br>
+Você pode usar este como base, o nome do meu arquivo é `LoginPage.js`:
 
-cypress/support/steps/LoginSteps.js
+cypress/support/steps/LoginPage.js
 ```
 /* global Given, Then, When */
 
@@ -137,8 +137,8 @@ Then("devo visualizar botao de conecte", () => {
 
 ![img](./imagens/print_steps.png "Arquivo LoginSteps.js")
 
-**Passo 11:** criar arquivo `.js` com os comandos e funções que executamos nos testes
-Você pode usar este como base:
+**Passo 11:** criar arquivo `.js` com os comandos e funções que executamos nos testes<br>
+Você pode usar este como base, o nome do meu arquivo é `LoginPage.js`:
 
 cypress/support/pageObjects/LoginPage.js
 ```
@@ -173,7 +173,7 @@ export default LoginPage;
 ![img](./imagens/print_page_objects.png "Arquivo PageObjects.js")
 
 **Passo 12:** criar arquivo `.js` com os elementos da página dos testes
-Você pode usar este como base:
+Você pode usar este como base, o nome do meu arquivo é `LoginElements.js`:
 
 cypress/support/elements/LoginElements.js
 ```
@@ -191,8 +191,8 @@ export default LoginElements;
 ```
 ![img](./imagens/print_elements.png "Arquivo LoginElements.js")
 
-**Passo 13:** executar os testes
-Você pode executar em:
+**Passo 13:** executar os testes<br>
+Você pode executar de 2 maneiras:
 
 * Modo headless (sem interface):
 `npm run test Login.feature`
