@@ -1,0 +1,19 @@
+{
+  "name": "cypress-9",
+  "version": "1.0.0",
+  "description": "Cypress 9 + Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run --browser chrome"
+  },
+  "author": "Rafael Rabelo da Silva",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^9.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+  "step_definitions": "cypress/support/steps"
+  }  
+}
