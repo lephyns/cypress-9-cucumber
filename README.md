@@ -1,6 +1,6 @@
 # O projeto
 
-Projeto criado para aprender a começar um projeto do zero de automação de testes com Cypress 9 e Cucumber.
+Projeto base automação de testes com Cypress 9 e Cucumber.
 
 # Dependências
 
